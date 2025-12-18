@@ -14,7 +14,7 @@ use crate::vendors::emv::positivo;
 pub type ActiveEMVProvider = landi::provider::LandiEMVProvider;
 
 #[cfg(feature = "positivo")]
-pub type ActiveEmvProvider = positivo::provider::PositivoEMVProvider;
+pub type ActiveEMVProvider = positivo::provider::PositivoEMVProvider;
 
 pub struct Engine {
     emv_engine: EMVStateMachine,
