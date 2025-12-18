@@ -1,13 +1,14 @@
-use tokio::sync::mpsc;
 use crate::fsm::emv::emv_fsm::StateMachine as EMVStateMachine;
 use crate::fsm::emv::{Input as EMVInput, Output, State, TransactionContext as EMVTransactionContext, TransactionContext};
+use tokio::sync::mpsc;
+
+use crate::vendors::emv::provider::EMVProvider;
 
 #[cfg(feature = "landi")]
 use crate::vendors::emv::landi;
 
 #[cfg(feature = "positivo")]
 use crate::vendors::emv::positivo;
-use crate::vendors::emv::provider::EMVProvider;
 
 #[cfg(feature = "landi")]
 pub type ActiveEMVProvider = landi::provider::LandiEMVProvider;
