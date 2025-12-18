@@ -20,6 +20,8 @@ pub struct Engine {
     emv_engine: EMVStateMachine,
     emv_vendor: ActiveEMVProvider,
 
+    // Todo: refatorar para inserir o TransactionContext aqui
+
     tx: mpsc::Sender<Output>,
 }
 
